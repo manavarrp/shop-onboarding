@@ -1,0 +1,8 @@
+# Ignorar node_modules dentro de back
+back/node_modules/
+
+# Ignorar la carpeta dist de NestJS
+back/dist/
+
+# Ignorar variables de entorno
+back/.env
