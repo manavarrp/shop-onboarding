@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ProductRepositoryPort, PRODUCT_REPOSITORY } from '../ports/product.repository.port';
 import { Product } from '../../domain/entities/product.entity';
-import { Result } from 'src/shared/result';
+import { Result } from '../../../../shared/result';
 
 
 export interface CreateProductDTO { name: string; price: number; description?: string }

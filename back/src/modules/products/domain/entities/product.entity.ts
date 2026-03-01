@@ -1,4 +1,4 @@
-import { Result } from "src/shared/result";
+import { Result } from "../../../../shared/result";
 
 
 export class Product {
