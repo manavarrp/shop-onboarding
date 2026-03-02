@@ -1,9 +1,8 @@
 import { Product } from "../../domain/entities/product.entity";
 
-
 export interface ProductRepositoryPort {
   save(product: Product): Promise<Product>;
-  findById(id: number): Promise<Product | null>;
+  findById(id: string): Promise<Product | null>;
   findAll(): Promise<Product[]>;
 }
 

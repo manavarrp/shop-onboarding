@@ -3,9 +3,7 @@ import { ProductRepositoryPort, PRODUCT_REPOSITORY } from '../ports/product.repo
 import { Product } from '../../domain/entities/product.entity';
 import { Result } from '../../../../shared/result';
 
-
 export interface CreateProductDTO { name: string; price: number; description?: string }
-
 
 @Injectable()
 export class CreateProductUseCase {
@@ -16,8 +14,8 @@ export class CreateProductUseCase {
       const product = Product.create(dto.name, dto.price, dto.description);
       const saved = await this.repo.save(product.getValue());
       return Result.ok(saved);
-    } catch (err: any) { return Result.fail(err.message); }
+    } catch (err: any) {
+      return Result.fail(err.message);
+    }
   }
 }
-
-

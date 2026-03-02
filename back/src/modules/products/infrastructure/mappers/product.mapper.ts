@@ -1,15 +1,14 @@
 import { Product } from '../../domain/entities/product.entity';
 
 export class ProductMapper {
-
   static toDomain(raw: any): Product {
     return Product.fromPersistence(
-      raw.id,
-      raw.name,
-      raw.price,
-      raw.description,
-      raw.createdAt,
-      raw.updatedAt,
+      raw.id,           // string
+      raw.name,         // string
+      raw.description,  // string | null
+      raw.price,        // number
+      raw.createdAt,    // Date
+      raw.updatedAt     // Date
     );
   }
 

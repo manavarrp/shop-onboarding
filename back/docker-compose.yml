@@ -6,6 +6,6 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: shop_onboarding_db
+      POSTGRES_DB: dbshop_onboarding
     ports:
       - "5432:5432"
