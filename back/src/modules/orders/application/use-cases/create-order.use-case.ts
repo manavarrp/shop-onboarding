@@ -15,12 +15,10 @@ export class CreateOrderUseCase {
     const itemsResult: Result<OrderItem>[] = [];
 
     for (const i of dto.items) {
-      // Aseguramos que productId existe
       if (!i.productId) {
         return Result.fail<Order>('productId is required');
       }
 
-      // Forzamos productId como string (seguro porque ya validamos)
       const itemResult = OrderItem.create(i.productId!, i.quantity, i.price);
       itemsResult.push(itemResult);
     }

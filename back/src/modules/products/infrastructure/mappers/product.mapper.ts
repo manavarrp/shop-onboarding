@@ -3,12 +3,12 @@ import { Product } from '../../domain/entities/product.entity';
 export class ProductMapper {
   static toDomain(raw: any): Product {
     return Product.fromPersistence(
-      raw.id,           // string
-      raw.name,         // string
-      raw.description,  // string | null
-      raw.price,        // number
-      raw.createdAt,    // Date
-      raw.updatedAt     // Date
+      raw.id,           
+      raw.name,        
+      raw.description,  
+      raw.price,       
+      raw.createdAt,    
+      raw.updatedAt     
     );
   }
 

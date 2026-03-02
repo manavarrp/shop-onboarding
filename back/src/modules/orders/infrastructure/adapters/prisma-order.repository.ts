@@ -33,7 +33,7 @@ export class PrismaOrderRepository implements OrderRepositoryPort {
         status: data.status,
         total: data.total,
         items: {
-          deleteMany: {}, // limpia items viejos
+          deleteMany: {},
           create: data.items,
         },
       },
